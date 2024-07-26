@@ -4,4 +4,5 @@ This  repository is only a practice.
 
 Commands to run: 
 >javac ArrayMain.java
+
 >java ArrayMain
