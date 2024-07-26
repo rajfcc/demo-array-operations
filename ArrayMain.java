@@ -39,10 +39,10 @@ public class ArrayMain {
                     arrOp.printArray(rev);
                     break;
                 case "7":
-                    int inserIndex = arrOp.getIndexFromUser();
+                    int insertIndex = arrOp.getIndexFromUser();
                     System.out.print("Enter the value: ");
                     int val = sc.nextInt();
-                    arr = arrOp.insertIntoArray(arr, inserIndex, val);
+                    arr = arrOp.insertIntoArray(arr, insertIndex, val);
                     arrOp.printArray(arr);
                     break;
                 case "8":
