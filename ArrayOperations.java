@@ -1,6 +1,7 @@
 package Practice.Array;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class ArrayOperations {
     Scanner scanner = new Scanner(System.in);
@@ -16,8 +17,8 @@ public class ArrayOperations {
     }
     public void printArray(int[] arr) {
         System.out.println("The elements in array are:  ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + "\t");
+        for (int i:arr) {
+            System.out.print(i+ "\t");
         }
         System.out.println("\n");
     }
@@ -82,9 +83,8 @@ public class ArrayOperations {
         int[] newArr = new int[arr.length+1];
         if(index <= arr.length){
             newArr[index] = val;
-            for(int i = 0; i<index;i++){
-                newArr[i]=arr[i];
-            }
+            //from suggestion
+            IntStream.range(0, index).forEach(i -> newArr[i] = arr[i]);
             for(int i = index+1;i<newArr.length;i++){
                 newArr[i]=arr[i-1];
             }
